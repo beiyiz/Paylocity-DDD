@@ -5,11 +5,13 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paylocity.Deduction.WebApi", "Paylocity.Deduction.WebApi\Paylocity.Deduction.WebApi.csproj", "{53D6151E-E67D-4A25-8CD4-CC90D7ADBA54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylocity.Deduction.Infrastructure", "Paylocity.Deduction.Infrastructure\Paylocity.Deduction.Infrastructure.csproj", "{0A65F954-7907-49B6-8ED2-AF07FBC82A9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paylocity.Deduction.Infrastructure", "Paylocity.Deduction.Infrastructure\Paylocity.Deduction.Infrastructure.csproj", "{0A65F954-7907-49B6-8ED2-AF07FBC82A9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylocity.Deduction.Core", "Paylocity.Deduction.Core\Paylocity.Deduction.Core.csproj", "{7DD2FF64-CAEE-44FD-8DF1-73EF7D86DE20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paylocity.Deduction.Core", "Paylocity.Deduction.Core\Paylocity.Deduction.Core.csproj", "{7DD2FF64-CAEE-44FD-8DF1-73EF7D86DE20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylocity.Deduction.SharedKernel", "Paylocity.Deduction.SharedKernel\Paylocity.Deduction.SharedKernel.csproj", "{16D04F76-565B-4B1E-9E7C-4D5E10757221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paylocity.Deduction.SharedKernel", "Paylocity.Deduction.SharedKernel\Paylocity.Deduction.SharedKernel.csproj", "{16D04F76-565B-4B1E-9E7C-4D5E10757221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylocity.Deduction.Test", "Paylocity.Deduction.Test\Paylocity.Deduction.Test.csproj", "{157DFE2C-A2B4-4E4B-B6AC-082DD2DB0E3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{16D04F76-565B-4B1E-9E7C-4D5E10757221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D04F76-565B-4B1E-9E7C-4D5E10757221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D04F76-565B-4B1E-9E7C-4D5E10757221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157DFE2C-A2B4-4E4B-B6AC-082DD2DB0E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157DFE2C-A2B4-4E4B-B6AC-082DD2DB0E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157DFE2C-A2B4-4E4B-B6AC-082DD2DB0E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157DFE2C-A2B4-4E4B-B6AC-082DD2DB0E3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

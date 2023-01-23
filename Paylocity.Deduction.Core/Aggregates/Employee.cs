@@ -9,9 +9,8 @@ namespace Paylocity.Deduction.Core.Aggregates
 {
     public class Employee : BaseEntity<int>, ICompute, IAggregateRoot
     {
-        public Employee(int id, string firstName, string lastName, decimal? annualSalary)
+        public Employee(string firstName, string lastName, decimal? annualSalary)
         {
-            Id = id;
             FirstName = firstName;
             LastName = lastName;
             AnnualSalary = annualSalary;

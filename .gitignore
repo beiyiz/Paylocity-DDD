@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Paylocity.Deduction.Core/bin/Debug/net6.0
+/Paylocity.Deduction.Core/obj
+/Paylocity.Deduction.Database/bin/Debug
+/Paylocity.Deduction.Database/obj/Debug
+/Paylocity.Deduction.Infrastructure/bin/Debug/net6.0
+/Paylocity.Deduction.Infrastructure/obj
+/Paylocity.Deduction.SharedKernel/bin/Debug/net6.0
+/Paylocity.Deduction.SharedKernel/obj/Debug/net6.0
+/Paylocity.Deduction.SharedKernel/obj
+/Paylocity.Deduction.Test/bin/Debug/net6.0
+/Paylocity.Deduction.Test/obj
+/Paylocity.Deduction.WebApi/bin/Debug/net6.0
+/Paylocity.Deduction.WebApi/obj/Debug/net6.0
+/Paylocity.Deduction.WebApi/obj
+/.vs/Paylocity.Deduction/DesignTimeBuild
+/.vs/Paylocity.Deduction.Database
+/.vs/ProjectEvaluation
+*.vsidx
