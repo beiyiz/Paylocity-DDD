@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OFzOwJQbJXtlDDCYY1MSeSIiXOXhVF6uB/ffuvmFi7U=",
+  "Source": "Paylocity.Deduction.WebApi",
+  "BasePath": "_content/Paylocity.Deduction.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

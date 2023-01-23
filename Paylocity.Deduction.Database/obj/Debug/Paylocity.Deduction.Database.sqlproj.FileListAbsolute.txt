@@ -1,0 +1,10 @@
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\bin\Debug\Paylocity.Deduction.Database.dacpac
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\bin\Debug\Paylocity.Deduction.Database.dll
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\bin\Debug\Paylocity.Deduction.Database.pdb
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\obj\Debug\Paylocity.Deduction.Database.sqlproj.AssemblyReference.cache
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\obj\Debug\Model.xml
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\obj\Debug\refactor.xml
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\obj\Debug\postdeploy.sql
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\obj\Debug\predeploy.sql
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\obj\Debug\Paylocity.Deduction.Database.dll
+C:\Users\Daniel\source\repos\Paylocity.Deduction.Database\Paylocity.Deduction.Database\obj\Debug\Paylocity.Deduction.Database.pdb

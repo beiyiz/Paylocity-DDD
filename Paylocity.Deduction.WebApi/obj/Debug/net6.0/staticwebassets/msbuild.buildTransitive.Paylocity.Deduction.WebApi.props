@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Paylocity.Deduction.WebApi.props" />
+</Project>
