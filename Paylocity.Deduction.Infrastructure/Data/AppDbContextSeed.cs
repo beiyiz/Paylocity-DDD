@@ -75,7 +75,7 @@ namespace Paylocity.Deduction.Infrastructure.Data
 
         private Employee CreateEmployee(string firstName, string lastName)
         {
-            return new Employee(firstName, lastName, null);
+            return new Employee(firstName, lastName);
         }
 
         

@@ -22,7 +22,7 @@ namespace Paylocity.Deduction.Test
 
         public SharedDatabaseFixture()
         {
-            var connString = @"Server=localhost\SQLEXPRESS;Database=Paylocity.Deduction.IntegrationTest;Trusted_Connection=True;ConnectRetryCount=0";
+            var connString = @"Data Source=dan\sqlexpress;Initial Catalog=Paylocity.Deduction.IntegrationTest;Integrated Security=True";
             Connection = new SqlConnection(connString);
 
             Seed();

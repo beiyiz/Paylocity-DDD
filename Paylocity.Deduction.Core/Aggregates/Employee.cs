@@ -7,25 +7,24 @@ using System.Runtime.CompilerServices;
 
 namespace Paylocity.Deduction.Core.Aggregates
 {
-    public class Employee : BaseEntity<int>, ICompute, IAggregateRoot
+    public class Employee : BaseEntity<int>, IAggregateRoot
     {
-        public Employee(string firstName, string lastName, decimal? annualSalary)
+        public Employee(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
-            AnnualSalary = annualSalary;
             Dependents = new List<Dependent>();
         }
 
 
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-        public decimal? AnnualSalary { get; private set; }
+        public decimal? Deductables { get; private set; }
         public IList<Dependent> Dependents { get; private set; } = new List<Dependent>();
 
-        public decimal Calculate()
+        public void Calculate()
         {
-            var deductable = EmployeeConstants.DEFAULT_EMPLOYEE_DEDUCTION;
+            decimal deductable = EmployeeConstants.DEFAULT_EMPLOYEE_DEDUCTION;
             if (this.FirstName.StartsWith("A")) { deductable = deductable * (100-EmployeeConstants.DISCOUNT_PERCENT) / 100; }
 
             if (this.Dependents != null && this.Dependents.Any())
@@ -37,7 +36,7 @@ namespace Paylocity.Deduction.Core.Aggregates
                 deductable += EmployeeConstants.DEFAULT_DEPENDENT_DEDUCTION * (cnt2 + (100-EmployeeConstants.DISCOUNT_PERCENT)/100 * cnt1);
                 
             }
-            return deductable;
+            this.Deductables = deductable;
         }
 
         

@@ -30,7 +30,7 @@ namespace Paylocity.Deduction.WebApi.Controllers
             if (employee is null) return NotFound();
 
             response.Employee = employee;
-            response.Deductables = employee.Calculate();
+            employee.Calculate();
             return Ok(response);
         }
     }

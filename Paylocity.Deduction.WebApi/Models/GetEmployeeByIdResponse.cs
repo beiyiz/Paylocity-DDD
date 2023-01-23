@@ -6,6 +6,5 @@ namespace Paylocity.Deduction.WebApi.Models
     {
         public Employee? Employee { get; set; }
 
-        public decimal Deductables { get; set; }
     }
 }

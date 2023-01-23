@@ -22,7 +22,7 @@ namespace Paylocity.Deduction.Infrastructure.Data.Config
                 .IsRequired()
               .HasMaxLength(ColumnConstants.DEFAULT_NAME_LENGTH);
 
-            builder.Property(e => e.AnnualSalary).HasColumnType("decimal(18,2)");
+            builder.Property(e => e.Deductables).HasColumnType("decimal(18,2)");
 
             
         }

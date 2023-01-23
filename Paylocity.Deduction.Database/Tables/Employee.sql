@@ -4,5 +4,5 @@
     [EmployeeId] NVARCHAR(50) NOT NULL, 
     [FirstName] NVARCHAR(50) NOT NULL, 
     [LastName] NVARCHAR(50) NOT NULL, 
-    [AnnualSalary] NUMERIC(18,2) NULL
+    [Deductables] NUMERIC(18,2) NULL
 )
