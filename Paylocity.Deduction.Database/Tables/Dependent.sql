@@ -4,7 +4,8 @@
     [FirstName] NVARCHAR(50) NOT NULL, 
     [LastName] NVARCHAR(50) NOT NULL, 
     [EmployeeId] INT NOT NULL, 
-    [DependentTypeId] INT NOT NULL, 
+    [DependentType_Name] NVARCHAR(20) NOT NULL, 
+    [DependentType_Description] NVARCHAR(50) NOT NULL, 
     CONSTRAINT [FK_Dependent_Employee] FOREIGN KEY ([EmployeeId]) REFERENCES dbo.Employee([Id]), 
-    CONSTRAINT [FK_Dependent_DependentType] FOREIGN KEY ([DependentTypeId]) REFERENCES dbo.DependentType([Id])
+    CONSTRAINT [FK_Dependent_DependentType] FOREIGN KEY ([DependentType_Name], [DependentType_Description]) REFERENCES dbo.DependentType([Name], [Description])
 )

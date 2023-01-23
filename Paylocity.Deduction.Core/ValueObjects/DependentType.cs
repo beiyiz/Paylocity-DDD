@@ -9,20 +9,19 @@ namespace Paylocity.Deduction.Core.ValueObjects
 {
     public class DependentType : ValueObject
     {
-        public string TypeName { get; private set; }
-        public string TypeDescription { get; private set; }
-        public int Id {get;}
+        public string Name { get; private set; }
+        public string Description { get; private set; }
         
-        public DependentType(string typeName, string typeDescription)
+        public DependentType(string name, string description)
         {
-            TypeName = typeName;
-            TypeDescription = typeDescription;
+            Name = name;
+            Description = description;
         }
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
-            yield return TypeName;
-            yield return TypeDescription;
+            yield return Name;
+            yield return Description;
         }
     }
 }

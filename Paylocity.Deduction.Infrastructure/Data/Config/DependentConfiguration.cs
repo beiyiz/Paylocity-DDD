@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;
 using System.Security.Cryptography.X509Certificates;
+using Paylocity.Deduction.Infrastructure.Data.Config;
 
 namespace Paylocity.Deduction.Infrastructure.Data.Config
 {
@@ -17,22 +18,27 @@ namespace Paylocity.Deduction.Infrastructure.Data.Config
         {
             builder.ToTable("Dependent").HasKey(x => x.Id);
 
-            builder.Property(c => c.Dependent_FirstName)
+            builder.Property(c => c.FirstName)
                 .IsRequired()
-                .HasColumnName("FirstName")
               .HasMaxLength(ColumnConstants.DEFAULT_NAME_LENGTH);
 
-            builder.Property(c => c.Dependent_LastName)
+            builder.Property(c => c.LastName)
                 .IsRequired()
-                .HasColumnName("LastName")
               .HasMaxLength(ColumnConstants.DEFAULT_NAME_LENGTH);
 
             
             builder.Property(c => c.EmployeeId).IsRequired();
-            builder.Property(c=>c.DependentTypeId).IsRequired();
 
-            builder.HasOne(c => c.DependentType);
+            builder.OwnsOne(p => p.DependentType, p =>
+            {
+                p.Property(pp => pp.Name).HasColumnName("DependentType_Name").HasMaxLength(ColumnConstants.DEFAULT_TYPE_LENGTH);
+                p.Property(pp => pp.Description).HasColumnName("DependentType_Description").HasMaxLength(ColumnConstants.DEFAULT_NAME_LENGTH);
+            });
+
+            builder.Metadata.FindNavigation(nameof(Dependent.DependentType))
+                      .SetPropertyAccessMode(PropertyAccessMode.Field);
 
         }
     }
 }
+

@@ -26,7 +26,6 @@ namespace Paylocity.Deduction.Infrastructure.Data
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Dependent> Dependents { get; set; }
-        public DbSet<DependentType> DependentTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

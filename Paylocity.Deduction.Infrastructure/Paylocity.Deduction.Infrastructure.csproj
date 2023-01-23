@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Compile Remove="Class1.cs" />
+    <Compile Remove="Data\Config\DependentTypeConfiguration.cs" />
     <Compile Remove="Data\RepositoryBase.cs" />
   </ItemGroup>
 

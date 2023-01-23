@@ -14,7 +14,6 @@ namespace Paylocity.Deduction.Core.Aggregates.Specification
         {
             Query
               .Include(e => e.Dependents.Where(d=>d.EmployeeId==id))
-              .ThenInclude(d=>d.DependentType)
               .Where(e => e.Id == id);
         }
     }

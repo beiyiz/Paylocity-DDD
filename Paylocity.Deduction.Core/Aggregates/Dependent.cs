@@ -10,25 +10,22 @@ namespace Paylocity.Deduction.Core.Aggregates
 {
     public class Dependent : BaseEntity<int>
     {
-        public Dependent(int employeeId, string dependent_FirstName, string dependent_LastName, int dependentTypeId)
+        public Dependent(int employeeId, string firstName, string lastName)
         {
             EmployeeId = employeeId;
-            Dependent_FirstName = dependent_FirstName;
-            Dependent_LastName = dependent_LastName;
-            DependentTypeId = dependentTypeId;
+            FirstName = firstName;
+            LastName = lastName;
         }
 
         public int EmployeeId { get; private set; }
-        public string Dependent_FirstName { get; private set; }
-        public string Dependent_LastName { get; private set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
 
-        public int DependentTypeId { get; private set; }
         public DependentType DependentType { get; private set; }
 
-        public void UpdateName(string firstName, string lastName)
+        public void SetDependentType(DependentType dependentType)
         {
-            Dependent_FirstName = firstName;
-            Dependent_LastName = lastName;
+            this.DependentType = dependentType;
         }
 
         

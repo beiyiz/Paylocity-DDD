@@ -16,12 +16,12 @@ namespace Paylocity.Deduction.Infrastructure.Data.Config
     {
         public void Configure(EntityTypeBuilder<DependentType> builder)
         {
-            builder.ToTable("DependentType").HasKey(x => x.Id);
+            builder.ToTable("DependentType").HasKey(x => new { x.Name, x.Description});
 
-            builder.Property(c => c.TypeName)
+            builder.Property(c => c.Name)
                 .IsRequired()
               .HasMaxLength(ColumnConstants.DEFAULT_TYPE_LENGTH);
-            builder.Property(c => c.TypeDescription)
+            builder.Property(c => c.Description)
                 .IsRequired()
               .HasMaxLength(ColumnConstants.DEFAULT_NAME_LENGTH);           
             

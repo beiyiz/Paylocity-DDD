@@ -41,26 +41,18 @@ namespace Paylocity.Deduction.Infrastructure.Data
                 if (!await _context.Employees.AnyAsync())
                 {
                     await _context.Employees.AddAsync(
-                        CreateEmployee());
+                        CreateEmployee("Beiyi","Zheng"));
 
                     await _context.SaveChangesWithIdentityInsert<Employee>();
                 }
 
-                if (!await _context.DependentTypes.AnyAsync())
-                {
-                    var depTypes = CreateDependentTypes();
-                    await _context.DependentTypes.AddRangeAsync(depTypes);
-                    await _context.SaveChangesWithIdentityInsert<DependentType>();
-                }
-
-               
-
+                
  
                 if (!await _context.Dependents.AnyAsync())
                 {
                     var employee = _context.Employees.FirstOrDefault(c => c.FirstName == "Beiyi" && c.LastName=="Zheng");
-                    var dependentType = _context.DependentTypes.FirstOrDefault(c => c.TypeName == "Spouse");
-                    await _context.Dependents.AddRangeAsync(CreateDependents(employee.Id, dependentType.Id));
+                    //var dependentType = _context.DependentTypes.FirstOrDefault(c => c.Name == "Spouse");
+                    await _context.Dependents.AddRangeAsync(CreateDependents(employee.Id,"Alex","Wilson", new DependentType("Spouse", "Husband")));
 
                     await _context.SaveChangesWithIdentityInsert<Dependent>();
                 }
@@ -81,29 +73,20 @@ namespace Paylocity.Deduction.Infrastructure.Data
 
        
 
-        private Employee CreateEmployee()
+        private Employee CreateEmployee(string firstName, string lastName)
         {
-            return new Employee("Beiyi", "Zheng", null);
-        }
-
-        private List<DependentType> CreateDependentTypes()
-        {
-           
-            var depTypes = new List<DependentType>()
-            {
-                new DependentType("Spouse", "Husband or Wife"),
-                new DependentType("Child", "Child")
-            };
-
-            return depTypes;        
+            return new Employee(firstName, lastName, null);
         }
 
         
-        private static List<Dependent> CreateDependents(int empId, int dependentTypeId)
+        
+        private static List<Dependent> CreateDependents(int empId, string firstName, string lastName, DependentType dependentType)
         {
+            var dependent = new Dependent(empId, firstName, lastName);
+            dependent.SetDependentType(dependentType);
             return new List<Dependent>()
             {
-                new Dependent(empId, "Beiyi", "Wilson", dependentTypeId)
+                dependent
             };
         }
 

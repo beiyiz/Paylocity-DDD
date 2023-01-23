@@ -30,7 +30,7 @@ namespace Paylocity.Deduction.Core.Aggregates
 
             if (this.Dependents != null && this.Dependents.Any())
             {
-                var cnt1 = this.Dependents.Count(x => x.Dependent_FirstName.StartsWith("A"));
+                var cnt1 = this.Dependents.Count(x => x.FirstName.StartsWith("A"));
                 var cnt2 = this.Dependents.Count - cnt1;
 
                 
