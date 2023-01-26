@@ -35,9 +35,7 @@ namespace Paylocity.Deduction.Infrastructure.Data.Config
                 p.Property(pp => pp.Description).HasColumnName("DependentType_Description").HasMaxLength(ColumnConstants.DEFAULT_NAME_LENGTH);
             });
 
-            builder.Metadata.FindNavigation(nameof(Dependent.DependentType))
-                      .SetPropertyAccessMode(PropertyAccessMode.Field);
-
+            
         }
     }
 }

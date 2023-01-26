@@ -13,7 +13,7 @@ namespace Paylocity.Deduction.Core.Aggregates.Specification
         public EmployeeByIdIncludeDependentsSpecification(int id)
         {
             Query
-              .Include(e => e.Dependents.Where(d=>d.EmployeeId==id))
+              .Include(e => e.Dependents)
               .Where(e => e.Id == id);
         }
     }

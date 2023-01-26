@@ -21,4 +21,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="FirstName" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="bbb8de61-f67b-435a-9222-c2ea477b6c5d" ChangeDateTime="01/23/2023 17:40:39">
+    <Property Name="ElementName" Value="[dbo].[Dependent].[DependentTypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Dependent]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DependentType_Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a43fb87-7f5c-4872-9a4f-1a120340dc79" ChangeDateTime="01/23/2023 20:10:27">
+    <Property Name="ElementName" Value="[dbo].[DependentType].[TypeName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DependentType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c031a67a-250c-429b-aac9-7b000cad02d7" ChangeDateTime="01/23/2023 20:10:36">
+    <Property Name="ElementName" Value="[dbo].[DependentType].[TypeDescription]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DependentType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e902dcfa-1c0b-4549-a2ce-73b006a2ab8b" ChangeDateTime="01/23/2023 20:10:55">
+    <Property Name="ElementName" Value="[dbo].[Dependent].[DependentType_Desc]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Dependent]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DependentType_Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="af93fc97-578e-4363-9530-9805ee2f73b4" ChangeDateTime="01/23/2023 21:51:57">
+    <Property Name="ElementName" Value="[dbo].[Employee].[AnnualSalary]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Employee]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Deductables" />
+  </Operation>
 </Operations>

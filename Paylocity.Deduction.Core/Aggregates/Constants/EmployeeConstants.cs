@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Paylocity.Deduction.Core.LINQ;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,7 @@ namespace Paylocity.Deduction.Core.Aggregates.Constants
         public const decimal DEFAULT_EMPLOYEE_DEDUCTION = 1000;
         public const decimal DEFAULT_DEPENDENT_DEDUCTION = 500;
         public const decimal DISCOUNT_PERCENT = 10;
+
+        public static SearchFilter PREDEFINED_RULE => new("FirstName", FilterOperator.StartsWith, "A");
     }
 }

@@ -25,11 +25,11 @@ namespace Paylocity.Deduction.Core.Aggregates
         public void Calculate()
         {
             decimal deductable = EmployeeConstants.DEFAULT_EMPLOYEE_DEDUCTION;
-            if (this.FirstName.StartsWith("A")) { deductable = deductable * (100-EmployeeConstants.DISCOUNT_PERCENT) / 100; }
-
-            if (this.Dependents != null && this.Dependents.Any())
+            if (this.FirstName.StartsWith("A", StringComparison.CurrentCultureIgnoreCase)) { deductable = deductable * (100-EmployeeConstants.DISCOUNT_PERCENT) / 100; }
+            
+            if (this.Dependents?.Any() ?? false)
             {
-                var cnt1 = this.Dependents.Count(x => x.FirstName.StartsWith("A"));
+                var cnt1 = this.Dependents.Count(x => x.FirstName.StartsWith("A", StringComparison.CurrentCultureIgnoreCase));
                 var cnt2 = this.Dependents.Count - cnt1;
 
                 

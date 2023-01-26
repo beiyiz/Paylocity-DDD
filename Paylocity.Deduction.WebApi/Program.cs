@@ -3,6 +3,8 @@ using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Paylocity.Deduction.Core.Aggregates;
+using Paylocity.Deduction.Core.Aggregates.Rule;
+using Paylocity.Deduction.Core.Interfaces;
 using Paylocity.Deduction.Infrastructure.Data;
 using Paylocity.Deduction.SharedKernel.Interface;
 using System.Reflection;
@@ -23,6 +25,7 @@ var assemblies = new Assembly[]
  builder.Services.AddMediatR(assemblies);
 
 builder.Services.AddScoped<IRepository<Employee>, EfRepository<Employee> > ();
+builder.Services.AddSingleton<IDecuctionRule, DeductionRule>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

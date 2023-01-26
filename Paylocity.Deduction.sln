@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paylocity.Deduction.Core", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paylocity.Deduction.SharedKernel", "Paylocity.Deduction.SharedKernel\Paylocity.Deduction.SharedKernel.csproj", "{16D04F76-565B-4B1E-9E7C-4D5E10757221}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paylocity.Deduction.Test", "Paylocity.Deduction.Test\Paylocity.Deduction.Test.csproj", "{157DFE2C-A2B4-4E4B-B6AC-082DD2DB0E3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paylocity.Deduction.Test", "Paylocity.Deduction.Test\Paylocity.Deduction.Test.csproj", "{157DFE2C-A2B4-4E4B-B6AC-082DD2DB0E3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7CF6FAB4-96C4-4AD6-AE1D-0FA172081F44}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

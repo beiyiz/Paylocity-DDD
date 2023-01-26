@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Paylocity.Deduction.Core.Aggregates;
+using Paylocity.Deduction.Core.Aggregates.Rule;
 using Paylocity.Deduction.Core.Aggregates.Specification;
 using Paylocity.Deduction.SharedKernel.Interface;
 using Paylocity.Deduction.WebApi.Models;
@@ -30,7 +31,11 @@ namespace Paylocity.Deduction.WebApi.Controllers
             if (employee is null) return NotFound();
 
             response.Employee = employee;
-            employee.Calculate();
+
+            var deductable = new DeductionCompute(new DeductionRule(), employee );
+
+            response.Deductables = deductable.Calculate();
+
             return Ok(response);
         }
     }
